@@ -4,6 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>JS Bin</title>
+  <style>
+    h1 {
+      color: #6c5ce7;
+    }
+    a{
+      color: #eb4d4b;
+      font-size: 20px;
+    }
+  </style>
 </head>
 <body>
   <h1>lorem</h1>
@@ -15,9 +24,9 @@
   <a href="https://www.jd.com/" traget="_blank">在新窗口打开京东</a>
   <a href="mailto:2232399616@qq.com" target="_blank">点我发送邮件</a>
   <a href="#bottom" target="_self">跳到页面底部</a>
-  <a href="aaaa" download="aaa.txt" target="self">点我下载文件</a> 等下设置
+  <a href="aaaa" download="aaa.txt" target="self">点我下载文件</a> 
   <br> 
-  <img width="300px" height="300px" src="">  
+  <img width="300px" height="300px" src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png">  
   <hr>
   <hr>
   <marquee behavior="" direction="left">piao</marquee>
@@ -66,7 +75,14 @@
   </dl>
   <hr>
   <h1>Google搜索</h1>
-  <input type="text" id="window"> <button href="#window" target="_blank">在新窗口打开搜索结果</a></button>
+  <form action="https://cn.bing.com/search" target="_blank">
+    <input type="text" name="q">
+    <input type="text" name="form" value="ANNTH1" hidden>
+    <input type="text" name="refig" value="67be881102f349a7914a63a50975986f" hidden>
+    <input type="text" name="pc" value="CNNDDB" hidden>
+    <input type="text" name="adppc" value="EDGEINJP" hidden>
+    <button>在新窗口打开搜索结果</a></button>
+  </form>
   <hr>
   <form>
     <p>个人信息调查表</p>
@@ -83,8 +99,8 @@
       <dt>
         年龄
         <dd>
-          <select name="请选择">
-            <div>请选择</div>
+          <select>
+            <option value="请选择" hidden></option>
             <optgroup label="少年">
               <option>1到6岁</option>
               <option>6到12岁</option>
@@ -104,7 +120,7 @@
       </dt>
       <dt>
         生日
-        <dd><input type="date" ></dd>
+        <dd><input type="date" value="2023-02-02" ></dd>
       </dt>
       <dt>
         生辰
@@ -113,7 +129,7 @@
       <dt>
         照片
         <dd>
-          <label><input type="file" id="img" accept="/.jpg,.png,.jpeg,.webp">点我上传照片，我比文件上传按钮好看</label>
+          <label><input type="file" id="img" accept="/.jpg,.png,.jpeg,.webp" hidden>点我上传照片，我比文件上传按钮好看</label>
         </dd>
       </dt>
       <dt>
@@ -171,7 +187,7 @@
     <a href="www.mi.com" target="frame1">小米</a><br>
     <iframe src="https://nodejs.org/zh-cn" frameborder="0" name="frame1"></iframe>
     <div>
-      <span>aaa</span>   <span>bbbbb</span>
+      <span>aaa</span>&emsp;&emsp;&emsp;&emsp;<span>bbbbb</span>
     </div>
     <pre>aaa      bbbbb</pre>
     &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
