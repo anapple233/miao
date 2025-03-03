@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+            padding:0;
+            margin: 0;
+        }
+
+        .a {
+            background-color: red;
+            padding-left: auto;
+            padding-right: auto;
+        }
+        .a div {
+            margin-top: 0;
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;  /*为什么必须设置内元素的margin为auto*/
+        }
+
+        div div {
+            margin-top: 20px;
+        }
+
+        .b {
+            padding-left: auto;
+            padding-right: 0;
+        }
+        
+        .b div {
+            margin-left: auto;
+            margin-right: 0;
+            border: 3px blue solid;
+            width: 800px;
+        }
+
+        .c {
+            padding: 0 40px;
+        }
+
+        .c div {       
+            padding-right: auto;
+            border: 3px pink solid;
+        }
+
+        .d {
+            padding-left: 40px;
+        }
+
+        .d div {
+            width: 500px;
+            height: 100px;
+            border: 3px green solid;
+        }
+
+        .e {
+            padding-left: 200px;
+            padding-right: 200px;
+        }
+
+        .e div{
+            padding: auto;
+            border: 4px purple dotted;
+            border-top-style: dashed;         
+            border-right-style: solid;                  
+        }
+
+        .f {
+            padding: auto;
+        }
+
+        .f div {
+            margin: auto;
+            margin-top: 20px;
+            width: 800px;
+            border: 6px black solid;
+        }
+
+        .g {
+            padding: auto;
+            margin-top: 20px;
+        }
+
+        .g div{
+            width: 0;
+            height: 0;
+            margin: auto;
+            border: 80px white solid;
+            border-bottom-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, vel! Lorem ipsum dolor is omnis, nisi ipsum delectus, blanditiis minima.</div>
+    </div>
+    <div class="b">
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, vel!</div>
+    </div>  
+    <div class="c">
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, vel!</div>
+    </div>
+    <div class="d">
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit illo dolorum tempore porro corporis nobis, hic molestias, maiores at iusto consequuntur minima in id, cupiditate commodi vel nostrum aperiam odit!</div>
+    </div>  
+    <div class="e">
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, vel!</div>
+    </div>
+    <div class="f">
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, vel!</div>
+    </div>
+    <div class="g">
+        <div></div>
+    </div>
+</body>
+</html>
