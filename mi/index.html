@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            xbackground-color: rgba(0,0,0,0.1);
+            xbox-shadow: inset 0 0 1px red;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            font-size: 0;
+            display: inline-block;
+        }
+
+        header {
+            width: 100%;
+            height: 40px;
+            color: rgb(176, 176, 176);
+            background-color: #333;
+        }
+
+
+        ul > * {
+            font-size: 12px;
+        }
+
+        ul li {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .a {
+            width: 1226px;
+            margin:auto;
+            padding-bottom: 22px;
+        }
+
+        header > div {
+            position: relative;
+            width: 1226px;
+            margin: auto;
+        }
+
+        header li {
+            display: inline-block;
+            height: 40px;
+            line-height: 40px;
+
+        }
+
+        header li:nth-child(2n) {
+            padding: 0 3.6px;
+            color:#424242;
+        }
+
+        header .left {
+            position: absolute;
+            left:0;
+        }
+
+        header .right {
+            position: absolute;
+            right:120px;
+            left: 950px;
+        }
+
+        header .shopping {
+            position: absolute;
+            right: 0;
+            width: 120px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            background-color: #fff;
+        }
+
+        header .shopping:hover .b {
+            display: block;
+            z-index: 3;
+        }
+
+        header .b {
+            display: none;
+            z-index: 1;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 316px;
+            height: 80px;
+            color: black;
+            text-align: center;
+            line-height: 80px;
+            box-shadow: inset  0 0 1px #333;
+
+        }
+
+        .mi {
+            position: relative;
+            height: 100px;
+            background-color: #fff;
+        }
+
+        .mi img{
+            margin: 25px 0;
+            width: 56px;
+            height: 56px;
+            background-color: #fff;
+            vertical-align: middle;
+        }
+
+        .mi ul {
+            box-sizing: border-box;
+            position:absolute;
+            height: 100px;
+            width: 850px;
+            left: 56px;
+            right: 296px;
+            line-height: 100px;
+            padding-left: 180px;
+            font-size: 0;
+        }
+
+        .mi li {
+            font-size: 16px;
+            display: inline-block;
+            margin-right: 20px;
+            color: #333;
+        }
+
+        .mi form {
+            font-size: 0;
+            position: absolute;
+            top:0;
+            right: 0;
+            left: 930px;
+            width: 296px;
+            height: 50px;
+            margin: 25px 0;
+
+        }
+
+        .mi form input {
+            vertical-align: top;
+            box-sizing: border-box;
+            width: 244px;
+            height: 50px;
+        }
+
+        .mi form button {
+            box-sizing: border-box;
+            width: 52px;
+            height: 50px;
+        }
+
+        main {
+            background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5d2e4ce0cc22c7d87981bac22d64e44d.jpg?thumb=1&w=1839&h=690&f=webp&q=90);
+            background-size: contain;
+            font: 0;
+            width: 100%;
+            height: 460px;
+            overflow: hidden;
+
+        }
+
+        main ul {
+            position: relative;
+            width: 234px;
+            height: 460px;
+            padding: 20px 0;
+            background-color: rgba(105,101,101,0.6);
+        }
+
+        main  img {
+            padding-left: 22px;
+            padding-right: 14px;
+            vertical-align: middle;
+        }
+
+        main span {
+            font-size: 14px;
+            color:rgb(51, 51, 51);
+        }
+
+        main > ul li {
+            width: 100%;
+        }
+
+        main > ul li  div {
+            margin:0 26px;
+            height: 42px;
+            line-height: 42px;
+            color:#fff;
+            /* text-align: justify; */
+        }
+
+        main li div {
+            display: inline-block;
+        }
+
+        main li ul {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            font-size: 14px;
+            background-color: #fff;
+            padding: 2px 0;
+            font-size: 0;
+        }
+
+        main li ul > li {
+            box-sizing: border-box;
+            display: inline-block;
+            margin:0;
+        }
+
+        main .pitch1 , main .pitch9, main .pitch10 {
+            display: none;
+            width: 530px;
+
+        }
+
+        main ul  ul > li {
+            width: 265px;
+            height: 76px;
+            line-height: 76px;
+
+        }
+
+        main .pitch2 {
+            display: none;
+            width: 260px;
+        }
+
+        main .pitch3, main .pitch6 {
+            display: none;
+            width: 992px;
+        }
+
+        main .pitch3 li, main .pitch6 li {
+            width: 248px;
+        }
+
+        main .pitch4, main .pitch5, main .pitch7, main .pitch8 {
+            display: none;
+            width: 795px;
+        }
+
+        main > ul >li:hover ul{
+            display: block;
+        }
+
+        .a .wrap {
+            position: relative;
+            height: 170px;
+            margin-top: 14px;
+        }
+
+        .a .wrap .left{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 234px;
+            height: 170px;
+            color: #fff;
+            background-color: #5f5750;
+        }
+
+        .a .wrap .left li {
+            position: relative;
+            width: 76px;
+            height: 82px;
+            border-left: 1px solid #665e57;
+            border-top: 1px solid #665e57;
+            text-align: center;
+        }
+
+        .a .wrap .left .cutting {
+            width: 74px;
+            height: 80px;
+            overflow: hidden;
+        }
+
+        .a .wrap .left img {
+            position: absolute;
+            top: 16px;
+            left: 23px;;
+            right: 23px;
+            width: 24px;
+            height: 24px;
+
+        }
+
+        .a .wrap .left span {
+            position: absolute;
+            top: 46px;
+            left: 0;
+            right: 0;
+            width: auto;
+        }
+
+        .a .wrap .right {
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 234px;
+            right: 0;
+            bottom: 0;
+
+        }
+
+        .a .wrap .right img {
+            width: 316px;
+            height: 170px;
+            margin-left: calc(44px / 3);
+        }
+
+        .bgc {
+            overflow: hidden;
+            background-color: rgb(245, 245, 245);
+            width: 100%;
+            height: 100%;
+        }
+
+        .bgc .center {
+            width: 1226px;
+            margin:auto
+        }
+
+        .bgc .redmi {
+            height: 120px;
+            margin: 22px 0;
+        }
+
+        .phone {
+            position: relative;
+            height: 100%;
+            margin-bottom: 40px;
+        }
+
+        .phone .text{
+            height: 58px;
+        }
+
+        .phone .text .left{
+            position: absolute;
+            left: 0;
+            font-size: 22px;
+            font-weight: 200;
+            line-height: 58px;
+            color: rgb(51,51,51);
+        }
+
+        .phone .text .right{
+            position: absolute;
+            right: 0;
+            font-size: 16px;
+            line-height: 58px;
+            color: #424242;
+        }
+
+        .phone .show {
+            height: 614px;
+        }
+
+        .phone .show .left {
+            position: relative;
+        }
+
+        .phone .show .left img {
+            width: 234px;
+            height: 614px;
+        }
+
+        .phone .show .right img {
+            width: 160px;
+            height: 160px;
+        }
+
+        .phone .show .left {
+            position: absolute;
+            left: 0;
+            font-size: 0;
+        }
+
+        .phone .show .right {
+
+            position: absolute;
+            right: 0;
+            width: 992px;
+            height: 614px;
+            text-align: center;
+            font-size: 0;
+        }
+
+        .phone .show .right li {
+            box-sizing: border-box;
+            padding: 20px 0;
+            background-color: #fff;
+            width: 234px;
+            height: 300px;
+            margin-left: 14px;
+            margin-bottom: 14px;
+            font-size: 0;
+        }
+
+        .phone .show .right li * {
+            font-size: 14px;
+        }
+
+        .phone .show .right li h1 {
+                font-weight: 400;
+                color: #333;
+                line-height: 21px;
+        }
+
+        .phone .show .right p:nth-child(3) {
+            text-overflow:ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            line-height: 18px;
+            margin: 10px;
+            color:rgb(176, 176, 176);
+        }
+
+        .phone .show .right p:last-child {
+            color: #ff6700;
+        }
+
+        .leftTwo .show .left img {
+            width: 234px;
+            height: 300px;
+        }
+
+        .leftTwo .show .left {
+            width: 300px;
+            height: 619px;
+        }
+
+        .leftTwo .show .left img:nth-child(1){
+            margin-bottom: 14px;
+        }
+
+        .rightTwo .show .right li:last-child div{
+            position:relative;
+            text-align: left;
+            box-sizing: border-box;
+            width: 234px;
+            height: 123px;
+            padding: 21px 30px;
+        }
+
+        .rightTwo .show .right li:last-child h1 {
+            width: 94px;
+            height: 42px;
+        }
+
+        .rightTwo .show .right li:last-child p {
+            width: 94px;
+            height: 21px;
+            margin: 0;
+            margin-top: 14px;
+        }
+
+        .rightTwo .show .right li:last-child span {
+            display: inline-block;
+            width: 234px;
+            height: 14px;
+            background-color: rgb(245,245,245);
+        }
+
+        .rightTwo .show .right li:last-child div div{
+
+            left:0;
+            text-align: left;
+        }
+
+        .rightTwo .show .right li:last-child div img {
+            position: absolute;
+            right: 30px;
+            width: 80px;
+            height: 80px;
+        }
+
+        .rightTwo .show .right li:last-child div:last-child {
+            padding: 50px 30px;
+        }
+
+        .rightTwo .show .right li:last-child div:last-child h1{
+            font-size: 18px;
+        }
+
+        .rightTwo .show .right li:last-child div:last-child p{
+            color: rgb(176, 176, 176);
+            margin-top: -18px;
+        }
+
+        .center .pen {
+            height: 120px;
+            margin-bottom: 40px;
+        }
+
+        footer {
+            height: 740px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <ul class="left">
+                <li>小米官网</li>
+                <li>|</li>
+                <li>小米商城</li>
+                <li>|</li>
+                <li>小米澎湃OS </li>
+                <li>|</li>
+                <li>小米汽车 </li>
+                <li>|</li>
+                <li>云服务</li>
+                <li>|</li>
+                <li>loT</li>
+                <li>|</li>
+                <li>有品</li>
+                <li>|</li>
+                <li>小爱开放平台</li>
+                <li>|</li>
+                <li>资质证照</li>
+                <li>|</li>
+                <li>协议规则</li>
+                <li>|</li>
+                <li>下载app</li>
+                <li>|</li>
+                <li>Select Location</li>
+            </ul>
+            <ul class="right">
+                <li>登录</li>
+                <li>|</li>
+                <li>注册</li>
+                <li>|</li>
+                <li>消息通知</li>
+            </ul>
+            <div class="shopping">购物车
+                <div class="b">购物车中还没有商品，赶紧选购吧！</div>
+            </div>
+        </div>
+    </header>
+    <div class="a">
+        <div class="mi">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/1024px-Xiaomi_logo_%282021-%29.svg.png" alt="">
+            <ul>
+                <li>Xiaomi手机
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>REDMI手机</li>
+                <li>电视</li>
+                <li>笔记本</li>
+                <li>平板</li>
+                <li>家电</li>
+                <li>路由器</li>
+                <li>服务中心</li>
+                <li>社区</li>
+            </ul>
+            <form action="">
+                <input type="text">
+                <button></button>
+            </form>
+        </div>
+        <main>
+            <ul>
+                <li><div>手机</div><div>></div>
+                    <ul class="pitch1">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                    </ul>
+                </li>
+                <li><div>电视</div><div>></div>
+                    <ul class="pitch2">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                    </ul>
+                </li>
+                <li><div>家电</div><div>></div>
+                    <ul class="pitch3">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                    </ul>
+                </li>
+                <li><div>笔记本 平板 显示器</div><div>></div>
+                    <ul class="pitch4">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                    </ul>
+                </li>
+                <li><div>出行 穿戴</div><div>></div>
+                    <ul class="pitch5">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                    </ul>
+                </li>
+                <li><div>耳机 音响</div><div>></div>
+                    <ul class="pitch6">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                    </ul>
+                </li>
+                <li><div>健康 儿童</div><div>></div>
+                    <ul class="pitch7">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                    </ul>
+                </li>
+                <li><div>生活 箱包</div><div>></div>
+                    <ul class="pitch8">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                    </ul>
+                </li>
+                <li><div>智能 路由器</div><div>></div>
+                    <ul class="pitch9">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                    </ul>
+                </li>
+                <li><div>电源 配件</div><div>></div>
+                    <ul class="pitch10">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
+                    </ul>
+                </li>
+            </ul>
+            <img src="" alt="">
+        </main>
+        <div class="wrap">
+
+            <ul class="left">
+                <li><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></li>
+                <li><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></li>
+                <li><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></li>
+                <li><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></li>
+                <li><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></li>
+                <li><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></li>
+
+            </ul>
+
+
+            <ul class="right">
+                <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e981f78d2ac17c504975a719cb8b069d.png?w=632&h=340" alt=""></li>
+                <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e981f78d2ac17c504975a719cb8b069d.png?w=632&h=340" alt=""></li>
+                <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e981f78d2ac17c504975a719cb8b069d.png?w=632&h=340" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bgc">
+        <div class="center">
+            <div class="redmi"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9e9c620dbad5c650b6ff0c573df76e14.jpg?thumb=1&w=1226&h=120&f=webp&q=90" alt=""></div>
+            <div class="phone">
+                <div class="text"><span class="left">手机</span><span class="right">查看更多 ></span></div>
+                <div class="show">
+                    <div class="left"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/55d2e50dd3783b52244ea3938e9dfca7.png?thumb=1&w=234&h=614&f=webp&q=90" alt=""></div>
+                    <ul class="right">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="phone rightTwo">
+                <div class="text"><span class="left">手机</span><span class="right">查看更多 ></span></div>
+                <div class="show">
+                    <div class="left"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/55d2e50dd3783b52244ea3938e9dfca7.png?thumb=1&w=234&h=614&f=webp&q=90" alt=""></div>
+                    <ul class="right">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li>
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=100&h=100&f=webp&q=90" alt="">
+
+                                <h1>Xiaomi 开放式耳机</h1><p>599元起</p>
+                            </div>
+                            <span></span>
+                            <div>
+                                <h1>浏览更多</h1>
+                                <p>耳机</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="phone rightTwo">
+                <div class="text"><span class="left">手机</span><span class="right">查看更多 ></span></div>
+                <div class="show">
+                    <div class="left"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/55d2e50dd3783b52244ea3938e9dfca7.png?thumb=1&w=234&h=614&f=webp&q=90" alt=""></div>
+                    <ul class="right">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li>
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=100&h=100&f=webp&q=90" alt="">
+
+                                <h1>Xiaomi 开放式耳机</h1><p>599元起</p>
+                            </div>
+                            <span></span>
+                            <div>
+                                <h1>浏览更多</h1>
+                                <p>耳机</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="phone leftTwo rightTwo">
+                <div class="text"><span class="left">手机</span><span class="right">查看更多 ></span></div>
+                <div class="show">
+                    <div class="left"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a272e865889798daea372ad757d814b7.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/71a8e491a39b9c246246140fe68d256b.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt=""></div>
+                    <ul class="right">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li>
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=100&h=100&f=webp&q=90" alt="">
+
+                                <h1>Xiaomi 开放式耳机</h1><p>599元起</p>
+                            </div>
+                            <span></span>
+                            <div>
+                                <h1>浏览更多</h1>
+                                <p>耳机</p>
+                            </div>
+                        </li>
+                     </ul>
+                </div>
+
+            </div>
+            <div class="phone leftTwo rightTwo">
+                <div class="text"><span class="left">手机</span><span class="right">查看更多 ></span></div>
+                <div class="show">
+                    <div class="left"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a272e865889798daea372ad757d814b7.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/71a8e491a39b9c246246140fe68d256b.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt=""></div>
+                    <ul class="right">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li>
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=100&h=100&f=webp&q=90" alt="">
+
+                                <h1>Xiaomi 开放式耳机</h1><p>599元起</p>
+                            </div>
+                            <span></span>
+                            <div>
+                                <h1>浏览更多</h1>
+                                <p>耳机</p>
+                            </div>
+                        </li>
+                     </ul>
+                </div>
+
+            </div>
+            <div class="phone leftTwo rightTwo">
+                <div class="text"><span class="left">手机</span><span class="right">查看更多 ></span></div>
+                <div class="show">
+                    <div class="left"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a272e865889798daea372ad757d814b7.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/71a8e491a39b9c246246140fe68d256b.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt=""></div>
+                    <ul class="right">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li>
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=100&h=100&f=webp&q=90" alt="">
+
+                                <h1>Xiaomi 开放式耳机</h1><p>599元起</p>
+                            </div>
+                            <span></span>
+                            <div>
+                                <h1>浏览更多</h1>
+                                <p>耳机</p>
+                            </div>
+                        </li>                    </ul>
+                </div>
+
+            </div>
+            <div class="phone leftTwo rightTwo">
+                <div class="text"><span class="left">手机</span><span class="right">查看更多 ></span></div>
+                <div class="show">
+                    <div class="left"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a272e865889798daea372ad757d814b7.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/71a8e491a39b9c246246140fe68d256b.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt=""></div>
+                    <ul class="right">
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
+                        <li>
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=100&h=100&f=webp&q=90" alt="">
+
+                                <h1>Xiaomi 开放式耳机</h1><p>599元起</p>
+                            </div>
+                            <span></span>
+                            <div>
+                                <h1>浏览更多</h1>
+                                <p>耳机</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="pen"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/88e35cffc82cd98cd53172460067af17.jpg?thumb=1&w=1226&h=120&f=webp&q=90" alt=""></div>
+        </div>
+
+
+    </div>
+    <footer>
+
+    </footer>
+
+
+
+</body>
+</html>
