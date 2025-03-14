@@ -116,7 +116,6 @@
         }
 
         .mi ul {
-            box-sizing: border-box;
             position:absolute;
             height: 100px;
             width: 850px;
@@ -148,13 +147,11 @@
 
         .mi form input {
             vertical-align: top;
-            box-sizing: border-box;
             width: 244px;
             height: 50px;
         }
 
         .mi form button {
-            box-sizing: border-box;
             width: 52px;
             height: 50px;
         }
@@ -218,7 +215,6 @@
         }
 
         main li ul > li {
-            box-sizing: border-box;
             display: inline-block;
             margin:0;
         }
@@ -309,7 +305,6 @@
         }
 
         .a .wrap .right {
-            box-sizing: border-box;
             position: absolute;
             top: 0;
             left: 234px;
@@ -339,6 +334,10 @@
         .bgc .redmi {
             height: 120px;
             margin: 22px 0;
+        }
+
+        .phone li:hover{
+            box-shadow: 0 0 10px rgba(0,0,0,0.1) ;
         }
 
         .phone {
@@ -399,7 +398,6 @@
         }
 
         .phone .show .right li {
-            box-sizing: border-box;
             padding: 20px 0;
             background-color: #fff;
             width: 234px;
@@ -531,6 +529,138 @@
             width: 100%;
             height: 1px;
             background-color: rgb(224, 224, 224);
+        }
+
+        footer .wrap {
+            height: 392px;
+            padding: 40px 0;
+            font-size: 0;
+            >ul {
+                width: 160px;
+                height: 100%;
+                float: left;
+                li {
+                    font-size: 12px;
+                    width: 100%;
+                    color: rgb(117, 117, 117);
+                    line-height: 18px;
+                    margin-top: 10px;
+                }
+                & li:first-child {
+                    font-size: 14px;
+                    color:rgb(66, 66, 66);
+                    margin-bottom: 14px;
+                }
+            }
+            .gap {
+                position: relative;
+                width: 20px;
+                height: 100%;
+                float: left;
+                }
+            .gap:after {
+                content: "";
+                position: absolute;
+                left:calc(100% - 1px);
+                top: 0;
+                width: 1px;
+                height: 100px;
+                background-color: rgb(224, 224, 224);
+            }
+            .right {
+                float: right;
+                width: 246px;
+                height: 100%;
+                text-align: center;
+                >ul:first-child {
+                    width: 100%;
+                    height: 80px;
+                }
+                >ul li {
+                    width: 100%;
+                    font-size: 12px;
+                    color: rgb(97, 97, 97);
+                    margin-bottom: 5px;
+                }
+                >ul li:first-child {
+                    font-size: 22px;
+                    color: rgb(255, 103, 0);
+                }
+                >ul li:last-child {
+                    width: 118px;
+                    height: 28px;
+                    line-height: 28px;
+                    text-align: center;
+                    margin-bottom: 25px;
+                    border:1px solid rgb(255, 103, 0);
+                    color: rgb(255, 103, 0);
+                }
+                .bottom :nth-child(3) {
+                    margin-left: 50px;
+                    text-align: left;
+                    width: 200px;
+                }
+
+            }
+        }
+
+        .footer-last {
+            width: 100%;
+            height: 260px;
+            background-color: rgb(245, 245, 245);
+            font-size: 12px;
+            padding: 30px 0;
+        }
+
+        .footer-last .center {
+            position:relative;
+            width: 1226px;
+            div>img:nth-child(2) {
+                width: 92px;
+                height: 28px;
+            }
+
+            div>img:nth-child(4) {
+                width: 74px;
+                height: 28px;
+            }
+            >img {
+                position:absolute;
+                left: 0;
+                top: 0;
+                margin-right: 20px;
+                width: 60px;
+                height: 60px;
+            }
+            .right {
+                position:absolute;
+                left: 80px;
+                top: 0;
+                width: 1149px;
+                p {
+                    color: rgb(176, 176, 176);
+                }
+            }
+
+            & li {
+                position: relative;
+                padding-right: 4px;
+                color:rgb(117, 117, 117);
+            }
+            & li::after {
+                content:"";
+                position: absolute;
+                left:calc(100% - 2px);
+                top: 0;
+                bottom: 0;
+                margin:auto;
+                width: 1px;
+                height: 12px;
+                background-color: rgb(183, 176, 176);
+            }
+            & li:last-child::after {
+                display: none;
+            }
         }
 
     </style>
@@ -1010,8 +1140,125 @@
                 <li>7天无理由退货</li>
                 <li>7天无理由退货</li>
             </ul>
-        </div>
+            <div class="wrap">
+                <ul></ul>
+                <ul>
+                    <li>选购指南</li>
+                    <li>手机</li>
+                    <li>电脑</li>
+                    <li>笔记本</li>
+                    <li>平板</li>
+                    <li>穿戴</li>
+                    <li>耳机</li>
+                    <li>家电</li>
+                    <li>路由器</li>
+                    <li>音箱</li>
+                    <li>配件</li>
+                </ul>
+                <ul>
+                    <li>选购指南</li>
+                    <li>手机</li>
+                    <li>电脑</li>
+                    <li>笔记本</li>
+                    <li>平板</li>
+                    <li>穿戴</li>
+                    <li>耳机</li>
+                    <li>家电</li>
+                    <li>路由器</li>
+                    <li>音箱</li>
+                    <li>配件</li>
+                </ul>
+                <ul>
+                    <li>选购指南</li>
+                    <li>手机</li>
+                    <li>电脑</li>
+                    <li>笔记本</li>
+                    <li>平板</li>
+                    <li>穿戴</li>
+                    <li>耳机</li>
+                    <li>家电</li>
+                    <li>路由器</li>
+                    <li>音箱</li>
+                    <li>配件</li>
+                </ul>
+                <ul>
+                    <li>选购指南</li>
+                    <li>手机</li>
+                    <li>电脑</li>
+                    <li>笔记本</li>
+                    <li>平板</li>
+                    <li>穿戴</li>
+                    <li>耳机</li>
+                    <li>家电</li>
+                    <li>路由器</li>
+                    <li>音箱</li>
+                    <li>配件</li>
+                </ul>
+                <ul>
+                    <li>选购指南</li>
+                    <li>手机</li>
+                    <li>电脑</li>
+                    <li>笔记本</li>
+                    <li>平板</li>
+                    <li>穿戴</li>
+                    <li>耳机</li>
+                    <li>家电</li>
+                    <li>路由器</li>
+                    <li>音箱</li>
+                    <li>配件</li>
+                </ul>
+                <div class="gap"></div>
+                <div class="right">
+                    <ul>
+                        <li>950816</li>
+                        <li>8:00-18:00（仅收市话费）</li>
+                        <li> 人工客服</li>
+                    </ul>
+                    <ul class="bottom">
+                        <li>950818</li>
+                        <li>8:00-18:00（仅收市话费）</li>
+                        <li>手机适用于：Xiaomi MIX Fold系列、MIX Flip系列、数字12系列及以上
 
+                            电视适用于：98寸、100寸电视
+                        </li>
+                        <li> 人工客服</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-last">
+            <div class="center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/1024px-Xiaomi_logo_%282021-%29.svg.png" alt="">
+                <div class="right">
+                    <ul>
+                        <li>小米商城</li>
+                        <li>小米澎湃OS</li>
+                        <li>米家</li>
+                        <li>多看</li>
+                        <li>游戏</li>
+                        <li>音乐</li>
+                        <li>政企服务</li>
+                        <li>小米天猫店 </li>
+                        <li>小米集团隐私政策</li>
+                        <li>小米公司儿童信息保护规则</li>
+                        <li>小米商城隐私政策</li>
+                        <li>小米商城用户协议 </li>
+                        <li>问题反馈</li>
+                        <li>Select Location</li>
+                    </ul>
+                    <ul>
+                        <li>北京互联网法院法律服务工作站</li>
+                        <li>中国消费者协会 </li>
+                        <li> 北京市消费者协会</li>
+                    </ul>
+                    <p>© mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2023]0169-004号</p>
+                    <p>（京）网械平台备字（2018）第00005号 药品医疗器械网络信息服务备案 (京)网药械信息备字（2024）第00478号 营业执照 医疗器械质量公告</p>
+                    <p>增值电信业务经营许可证编号：京B2-20180851 网络食品经营备案 京食药网食备202010048   食品经营许可证 新出发京批字第直220280号</p>
+                    <p>违法和不良信息举报电话：171-5104-4404 知识产权侵权投诉 本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+                    <div><img src="https://s01.mifile.cn/i/v-logo-2.png" alt=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/icon3.png" alt=""><img src="https://i8.mifile.cn/b2c-mimall-media/ba10428a4f9495ac310fd0b5e0cf8370.png" alt=""><img src="https://cnbj1.fds.api.xiaomi.com/b2c-misite-activity/54cb9cd145097436c395c0ffd710d419.png" alt=""></div>
+                </div>
+            </div>
+        </div>
     </footer>
 
 
