@@ -13,6 +13,11 @@
             padding: 0;
         }
 
+        a {
+            list-style: none;
+            text-decoration: none;
+            color: inherit;
+        }
         ul {
             list-style: none;
             font-size: 0;
@@ -33,12 +38,11 @@
 
         ul li {
             display: inline-block;
-            overflow: hidden;
         }
 
         .a {
             width: 1226px;
-            margin:auto;
+            margin: auto;
             padding-bottom: 22px;
         }
 
@@ -78,23 +82,24 @@
             height: 40px;
             text-align: center;
             line-height: 40px;
-            background-color: #fff;
+            background-color: rgb(61,61,61);
         }
 
         header .shopping:hover .b {
             display: block;
-            z-index: 3;
         }
 
         header .b {
             display: none;
             z-index: 1;
+            font-size: 12px;
             position: absolute;
             top: 100%;
             right: 0;
             width: 316px;
             height: 80px;
-            color: black;
+            color: rgb(66,66,66);
+            background-color: #fff;
             text-align: center;
             line-height: 80px;
             box-shadow: inset  0 0 1px #333;
@@ -156,14 +161,16 @@
             height: 50px;
         }
 
+        .a main >ul > li:hover {
+            background-color: rgb(255, 103, 0);
+        }
+
         main {
             background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5d2e4ce0cc22c7d87981bac22d64e44d.jpg?thumb=1&w=1839&h=690&f=webp&q=90);
             background-size: contain;
             font: 0;
             width: 100%;
             height: 460px;
-            overflow: hidden;
-
         }
 
         main ul {
@@ -202,6 +209,7 @@
 
         main li div {
             display: inline-block;
+            font-size: 14px;
         }
 
         main li ul {
@@ -283,7 +291,6 @@
         .a .wrap .left .cutting {
             width: 74px;
             height: 80px;
-            overflow: hidden;
         }
 
         .a .wrap .left img {
@@ -329,154 +336,6 @@
         .center {
             width: 1226px;
             margin:auto
-        }
-
-        .bgc .redmi {
-            height: 120px;
-            margin: 22px 0;
-        }
-
-        .phone li:hover{
-            box-shadow: 0 0 10px rgba(0,0,0,0.1) ;
-        }
-
-        .phone {
-            position: relative;
-            height: 100%;
-            margin-bottom: 40px;
-        }
-
-        .phone .text{
-            height: 58px;
-        }
-
-        .phone .text .left{
-            position: absolute;
-            left: 0;
-            font-size: 22px;
-            font-weight: 200;
-            line-height: 58px;
-            color: rgb(51,51,51);
-        }
-
-        .phone .text .right{
-            position: absolute;
-            right: 0;
-            font-size: 16px;
-            line-height: 58px;
-            color: #424242;
-        }
-
-        .phone .show {
-            height: 614px;
-        }
-
-        .phone .show .left img {
-            width: 234px;
-            height: 614px;
-        }
-
-        .phone .show .right img {
-            width: 160px;
-            height: 160px;
-        }
-
-        .phone .show .left {
-            position: absolute;
-            width: 234px;
-            height: 614px;
-            font-size: 0;
-        }
-
-        .phone .show .right {
-            position: absolute;
-            right: 0;
-            width: 992px;
-            height: 614px;
-            text-align: center;
-            font-size: 0;
-        }
-
-        .phone .show .right li {
-            padding: 20px 0;
-            background-color: #fff;
-            width: 234px;
-            height: 300px;
-            margin-left: 14px;
-            margin-bottom: 14px;
-            font-size: 0;
-        }
-
-        .phone .show .right li * {
-            font-size: 14px;
-        }
-
-        .phone .show .right li h1 {
-            font-weight: 400;
-            color: #333;
-            line-height: 21px;
-        }
-
-        .phone .show .right p:nth-child(3) {
-            text-overflow:ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-            line-height: 18px;
-            margin: 10px;
-            color:rgb(176, 176, 176);
-        }
-
-        .phone .show .right p:last-child {
-            color: #ff6700;
-        }
-
-        .leftTwo .show .left img {
-            width: 234px;
-            height: 300px;
-            margin-bottom: 14px;
-        }
-
-        .rightTwo .right > li {
-            float:left;
-        }
-
-        .rightTwo .right li:nth-child(n + 8)  {
-            padding: 20px 30px;
-            position: relative;
-            width: 234px;
-            height: 143px;
-            text-align: left;
-        }
-
-        .rightTwo .show .right li:nth-child(8) img  {
-            position: absolute;
-            top: 30px;
-            right: 20px;
-            width: 80px;
-            height: 80px;
-        }
-
-        .rightTwo .show .right li:nth-child(8) h1 {
-            width: 94px;
-            height: 42px;
-            margin-top: 20px;
-        }
-
-        .rightTwo .show .right li:nth-child(8) p {
-            margin: 0;
-        }
-
-        .rightTwo .show .right li:last-child {
-             padding:50px 30px;
-        }
-
-        .rightTwo .show .right li:last-child h1 {
-            font-size: 18px;
-        }
-
-        .rightTwo .show .right li:last-child p {
-            color:#757575;
-            font-size: 12px;
         }
 
         .center .pen {
@@ -663,6 +522,141 @@
             }
         }
 
+        .redmi {
+            width: 1226px;
+            height: 120px;
+            margin: 22px 0;
+        }
+
+        .redmi  img {
+            width: 1226px;
+            height: 120px;
+        }
+
+        .bgc .text {
+            display: flex;
+            height: 58px;
+            line-height: 58px;
+            justify-content: space-between;
+        }
+
+        .bgc .text span:first-child {
+            font-size: 22px;
+            color: rgb(64, 64, 64);
+            margin-bottom: 18px;
+        }
+
+        .bgc .text span:last-child {
+            font-size: 16px;
+            color: rgb(66, 66, 66);
+        }
+
+        .bgc .text span:last-child:hover {
+            color:rgb(255, 103, 0);
+        }
+
+        .bgc aside > ul > li {
+            width: 234px;
+            height: 614px;
+            background-color: #fff;
+        }
+
+        .bgc aside > ul > li:not(li:first-child) img{
+            width: 160px;
+            height: 160px;
+        }
+
+        .bgc aside > ul > li:not(li:first-child) {
+            width: 234px;
+            height: 300px;
+            margin-left: 14px;
+            margin-bottom: 14px;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .bgc aside > ul > li {
+            position: relative;
+            float: left;
+            transition: 5s;
+        }
+
+        .bgc aside > ul > li:hover {
+            left: -1px;
+            top: -1px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .bgc aside li p:nth-child(2) {
+            font-size: 14px;
+            color: rgb(51,51,51);
+        }
+
+        .bgc aside li p:nth-child(3) {
+            font-size: 12px;
+            color: rgb(176, 176, 176);
+            text-wrap: nowrap;
+            margin: 0 10px 10px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .bgc aside li p:last-child {
+            font-size: 14px;
+            color:rgb(255, 103, 0)
+        }
+
+        #small {
+            text-align: justify;
+            width: 234px ;
+            height: 143px ;
+        }
+
+        #small div {
+            position: relative;
+            padding: 10px 30px;
+        }
+
+        #small img{
+            position: absolute;
+            top:-10px;
+            right: 20px;
+            top: auto;
+            width: 80px;
+            height: 80px;
+        }
+
+        #small p {
+            margin-top: 10px;
+            margin-left: 0;
+            width: 94px;
+        }
+
+        #small .fz18 {
+            font-size: 18px;
+        }
+
+        #small .mar-0 {
+            margin: 0;
+        }
+
+        #middle{
+            margin:0;
+            padding: 0;
+            width: 234px;
+            height: 300px;
+        }
+
+        #middle div {
+            width: 100%;
+            height: 100%;
+        }
+
+        #middle img {
+            width: 100%;
+            height: 100%;
+        }
+
     </style>
 </head>
 <body>
@@ -670,36 +664,36 @@
     <header>
         <div>
             <ul class="left">
-                <li>小米官网</li>
+                <li><a href="">小米官网</a></li>
                 <li>|</li>
-                <li>小米商城</li>
+                <li><a href="">小米商城</a></li>
                 <li>|</li>
-                <li>小米澎湃OS </li>
+                <li><a href="">小米澎湃OS</a> </li>
                 <li>|</li>
-                <li>小米汽车 </li>
+                <li><a href="">小米汽车</a> </li>
                 <li>|</li>
-                <li>云服务</li>
+                <li><a href="">云服务</a></li>
                 <li>|</li>
-                <li>loT</li>
+                <li><a href="">loT</a></li>
                 <li>|</li>
-                <li>有品</li>
+                <li><a href="">有品</a></li>
                 <li>|</li>
-                <li>小爱开放平台</li>
+                <li><a href="">小爱开放平台</a></li>
                 <li>|</li>
-                <li>资质证照</li>
+                <li><a href="">资质证照</a></li>
                 <li>|</li>
-                <li>协议规则</li>
+                <li><a href="">协议规则</a></li>
                 <li>|</li>
-                <li>下载app</li>
+                <li><a href="">下载app</a></li>
                 <li>|</li>
-                <li>Select Location</li>
+                <li><a href="">Select Location</a></li>
             </ul>
             <ul class="right">
-                <li>登录</li>
+                <li><a href="">登录</a></li>
                 <li>|</li>
-                <li>注册</li>
+                <li><a href="">注册</a></li>
                 <li>|</li>
-                <li>消息通知</li>
+                <li><a href="">消息通知</a></li>
             </ul>
             <div class="shopping">购物车
                 <div class="b">购物车中还没有商品，赶紧选购吧！</div>
@@ -708,26 +702,18 @@
     </header>
     <div class="a">
         <div class="mi">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/1024px-Xiaomi_logo_%282021-%29.svg.png" alt="">
+            <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/1024px-Xiaomi_logo_%282021-%29.svg.png" alt=""></a>
+
             <ul>
-                <li>Xiaomi手机
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </li>
-                <li>REDMI手机</li>
-                <li>电视</li>
-                <li>笔记本</li>
-                <li>平板</li>
-                <li>家电</li>
-                <li>路由器</li>
-                <li>服务中心</li>
-                <li>社区</li>
+                <li><a href="">Xiaomi手机</a></li>
+                <li><a href="">REDMI手机</a></li>
+                <li><a href="">电视</a></li>
+                <li><a href="">笔记本</a></li>
+                <li><a href="">平板</a></li>
+                <li><a href="">家电</a></li>
+                <li><a href="">路由器</a></li>
+                <li><a href="">服务中心</a></li>
+                <li><a href="">社区</a></li>
             </ul>
             <form action="">
                 <input type="text">
@@ -736,7 +722,7 @@
         </div>
         <main>
             <ul>
-                <li><div>手机</div><div>></div>
+                <li><a href=""><div>手机</div><div>></div></a>
                     <ul class="pitch1">
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
@@ -752,7 +738,7 @@
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                     </ul>
                 </li>
-                <li><div>电视</div><div>></div>
+                <li><a href=""><div>电视</div><div>></div></a>
                     <ul class="pitch2">
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
@@ -762,7 +748,7 @@
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                     </ul>
                 </li>
-                <li><div>家电</div><div>></div>
+                <li><a href=""><div>家电</div><div>></div></a>
                     <ul class="pitch3">
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
@@ -790,7 +776,7 @@
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                     </ul>
                 </li>
-                <li><div>笔记本 平板 显示器</div><div>></div>
+                <li><a href=""><div>笔记本 平板 显示器</div><div>></div></a>
                     <ul class="pitch4">
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
@@ -812,7 +798,7 @@
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                     </ul>
                 </li>
-                <li><div>出行 穿戴</div><div>></div>
+                <li><a href=""><div>出行 穿戴</div><div>></div></a>
                     <ul class="pitch5">
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
@@ -834,7 +820,7 @@
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                     </ul>
                 </li>
-                <li><div>耳机 音响</div><div>></div>
+                <li><a href=""><div>耳机 音响</div><div>></div></a>
                     <ul class="pitch6">
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
@@ -862,7 +848,7 @@
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                     </ul>
                 </li>
-                <li><div>健康 儿童</div><div>></div>
+                <li><a href=""><div>健康 儿童</div><div>></div></a>
                     <ul class="pitch7">
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
@@ -884,7 +870,7 @@
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                     </ul>
                 </li>
-                <li><div>生活 箱包</div><div>></div>
+                <li><a href=""><div>生活 箱包</div><div>></div></a>
                     <ul class="pitch8">
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
@@ -906,7 +892,7 @@
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                     </ul>
                 </li>
-                <li><div>智能 路由器</div><div>></div>
+                <li><a href=""><div>智能 路由器</div><div>></div></a>
                     <ul class="pitch9">
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
@@ -922,7 +908,7 @@
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                     </ul>
                 </li>
-                <li><div>电源 配件</div><div>></div>
+                <li><a href=""><div>电源 配件</div><div>></div></a>
                     <ul class="pitch10">
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
                         <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/182d59037498cad87202c36e1a8ea23c.png?thumb=1&w=40&h=40&f=webp&q=90" alt=""><span>测试</span></li>
@@ -944,189 +930,697 @@
         <div class="wrap">
 
             <ul class="left">
-                <li><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></li>
-                <li><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></li>
-                <li><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></li>
-                <li><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></li>
-                <li><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></li>
-                <li><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></li>
+                <li><a href=""><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></a></li>
+                <li><a href=""><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></a></li>
+                <li><a href=""><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></a></li>
+                <li><a href=""><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></a></li>
+                <li><a href=""><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></a></li>
+                <li><a href=""><div class="cutting"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48" alt=""><span>保障服务</span></div></a></li>
 
             </ul>
 
 
             <ul class="right">
-                <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e981f78d2ac17c504975a719cb8b069d.png?w=632&h=340" alt=""></li>
-                <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e981f78d2ac17c504975a719cb8b069d.png?w=632&h=340" alt=""></li>
-                <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e981f78d2ac17c504975a719cb8b069d.png?w=632&h=340" alt=""></li>
+                <li><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e981f78d2ac17c504975a719cb8b069d.png?w=632&h=340" alt=""></a></li>
+                <li><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e981f78d2ac17c504975a719cb8b069d.png?w=632&h=340" alt=""></a></li>
+                <li><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e981f78d2ac17c504975a719cb8b069d.png?w=632&h=340" alt=""></a></li>
             </ul>
         </div>
     </div>
     <div class="bgc">
         <div class="center">
-            <div class="redmi"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9e9c620dbad5c650b6ff0c573df76e14.jpg?thumb=1&w=1226&h=120&f=webp&q=90" alt=""></div>
-            <div class="phone">
-                <div class="text"><span class="left">手机</span><span class="right">查看更多 ></span></div>
-                <div class="show">
-                    <div class="left"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/55d2e50dd3783b52244ea3938e9dfca7.png?thumb=1&w=234&h=614&f=webp&q=90" alt=""></div>
-                    <ul class="right">
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                    </ul>
-                </div>
+            <div class="redmi"><a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9e9c620dbad5c650b6ff0c573df76e14.jpg?thumb=1&w=1839&h=180&f=webp&q=90" alt=""></a></div>
+            <aside>
+                <div class="text"><span>手机</span><a href=""><span>查看更多</span></a></div>
+                <ul>
+                    <li><a href=""><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/55d2e50dd3783b52244ea3938e9dfca7.png?thumb=1&w=351&h=921&f=webp&q=90" alt="" width="234px" height="614px"></div></a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
 
-            </div>
-            <div class="phone rightTwo">
-                <div class="text"><span class="left">手机</span><span class="right">查看更多 ></span></div>
-                <div class="show">
-                    <div class="left"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/55d2e50dd3783b52244ea3938e9dfca7.png?thumb=1&w=234&h=614&f=webp&q=90" alt=""></div>
-                    <ul class="right">
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li>
-                            <h1>Xiaomi 开放式耳机</h1>
-                            <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=100&h=100&f=webp&q=90" alt="">
-                            <p>599元</p>
-                        </li>
-                        <li>
-                            <h1>浏览更多</h1>
-                            <p>耳机</p>
-                        </li>
-                    </ul>
-                </div>
 
-            </div>
-            <div class="phone rightTwo">
-                <div class="text"><span class="left">手机</span><span class="right">查看更多 ></span></div>
-                <div class="show">
-                    <div class="left"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/55d2e50dd3783b52244ea3938e9dfca7.png?thumb=1&w=234&h=614&f=webp&q=90" alt=""></div>
-                    <ul class="right">
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li>
-                            <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=100&h=100&f=webp&q=90" alt="">
-                            <h1>Xiaomi 开放式耳机</h1><p>599元起</p>
-                        </li>
-                        <li>
-                            <h1>浏览更多</h1>
-                            <p>耳机</p>
-                        </li>
-                    </ul>
-                </div>
+                </ul>
+                <div class="text"><span>手机</span><a href=""><span>查看更多</span></a></div>
+                <ul>
+                    <li><a href=""><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/55d2e50dd3783b52244ea3938e9dfca7.png?thumb=1&w=351&h=921&f=webp&q=90" alt="" width="234px" height="614px"></div></a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="small">
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=120&h=120&f=webp&q=90" alt="">
+                                <p>Xiaomi 开放式耳机</p>
+                                <p>599元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="small">
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p class="fz18">浏览更多</p>
+                                <p class="mar-0">耳机</p>
+                                <p></p>
+                            </div>
+                        </a>
+                    </li>
 
-            </div>
-            <div class="phone leftTwo rightTwo">
-                <div class="text"><span class="left">手机</span><span class="right">查看更多 ></span></div>
-                <div class="show">
-                    <div class="left"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a272e865889798daea372ad757d814b7.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/71a8e491a39b9c246246140fe68d256b.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt=""></div>
-                    <ul class="right">
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li>
-                            <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=100&h=100&f=webp&q=90" alt="">
-                            <h1>Xiaomi 开放式耳机</h1><p>599元起</p>
-                        </li>
-                        <li>
-                            <h1>浏览更多</h1>
-                            <p>耳机</p>
-                        </li>
-                     </ul>
-                </div>
 
-            </div>
-            <div class="phone leftTwo rightTwo">
-                <div class="text"><span class="left">手机</span><span class="right">查看更多 ></span></div>
-                <div class="show">
-                    <div class="left"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a272e865889798daea372ad757d814b7.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/71a8e491a39b9c246246140fe68d256b.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt=""></div>
-                    <ul class="right">
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li>
-                            <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=100&h=100&f=webp&q=90" alt="">
-                            <h1>Xiaomi 开放式耳机</h1><p>599元起</p>
-                        </li>
-                        <li>
-                            <h1>浏览更多</h1>
-                            <p>耳机</p>
-                        </li>
-                     </ul>
-                </div>
+                </ul>
+                <div class="text"><span>手机</span><a href=""><span>查看更多</span></a></div>
+                <ul>
+                    <li><a href=""><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/55d2e50dd3783b52244ea3938e9dfca7.png?thumb=1&w=351&h=921&f=webp&q=90" alt="" width="234px" height="614px"></div></a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="small">
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=120&h=120&f=webp&q=90" alt="">
+                                <p>Xiaomi 开放式耳机</p>
+                                <p>599元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="small">
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p class="fz18">浏览更多</p>
+                                <p class="mar-0">耳机</p>
+                                <p></p>
+                            </div>
+                        </a>
+                    </li>
 
-            </div>
-            <div class="phone leftTwo rightTwo">
-                <div class="text"><span class="left">手机</span><span class="right">查看更多 ></span></div>
-                <div class="show">
-                    <div class="left"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a272e865889798daea372ad757d814b7.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/71a8e491a39b9c246246140fe68d256b.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt=""></div>
-                    <ul class="right">
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li>
-                            <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=100&h=100&f=webp&q=90" alt="">
-                            <h1>Xiaomi 开放式耳机</h1><p>599元起</p>
-                        </li>
-                        <li>
-                            <h1>浏览更多</h1>
-                            <p>耳机</p>
-                        </li>
-                    </ul>
-                </div>
 
-            </div>
-            <div class="phone leftTwo rightTwo">
-                <div class="text"><span class="left">手机</span><span class="right">查看更多 ></span></div>
-                <div class="show">
-                    <div class="left"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a272e865889798daea372ad757d814b7.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/71a8e491a39b9c246246140fe68d256b.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt=""></div>
-                    <ul class="right">
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li><img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202502251811_93715df0882e43e252843e3c7b775570.png?thumb=1&w=200&h=200&f=webp&q=90" alt=""><h1>Xiaomi 15 Ultra</h1><p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p><p>6499元起</p></li>
-                        <li>
-                            <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=100&h=100&f=webp&q=90" alt="">
-                            <h1>Xiaomi 开放式耳机</h1><p>599元起</p>
-                        </li>
-                        <li>
-                            <h1>浏览更多</h1>
-                            <p>耳机</p>
-                        </li>
-                    </ul>
-                </div>
+                </ul>
+                <div class="text"><span>手机</span><a href=""><span>查看更多</span></a></div>
+                <ul>
+                    <li id="middle"><a href=""><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/71a8e491a39b9c246246140fe68d256b.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt="" width="234px" height="614px"></div></a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="middle"><a href=""><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/46a738e1b375a08dd691a43bb05767f9.png?thumb=1&w=234&h=300&f=webp&q=90" alt="" width="234px" height="614px"></div></a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="small">
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=120&h=120&f=webp&q=90" alt="">
+                                <p>Xiaomi 开放式耳机</p>
+                                <p>599元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="small">
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p class="fz18">浏览更多</p>
+                                <p class="mar-0">耳机</p>
+                                <p></p>
+                            </div>
+                        </a>
+                    </li>
 
-            </div>
-            <div class="pen"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/88e35cffc82cd98cd53172460067af17.jpg?thumb=1&w=1226&h=120&f=webp&q=90" alt=""></div>
+
+                </ul>
+                <ul>
+                    <li id="middle"><a href=""><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/71a8e491a39b9c246246140fe68d256b.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt="" width="234px" height="614px"></div></a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="middle"><a href=""><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/46a738e1b375a08dd691a43bb05767f9.png?thumb=1&w=234&h=300&f=webp&q=90" alt="" width="234px" height="614px"></div></a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="small">
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=120&h=120&f=webp&q=90" alt="">
+                                <p>Xiaomi 开放式耳机</p>
+                                <p>599元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="small">
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p class="fz18">浏览更多</p>
+                                <p class="mar-0">耳机</p>
+                                <p></p>
+                            </div>
+                        </a>
+                    </li>
+
+
+                </ul>
+                <ul>
+                    <li id="middle"><a href=""><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/71a8e491a39b9c246246140fe68d256b.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt="" width="234px" height="614px"></div></a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="middle"><a href=""><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/46a738e1b375a08dd691a43bb05767f9.png?thumb=1&w=234&h=300&f=webp&q=90" alt="" width="234px" height="614px"></div></a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="small">
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=120&h=120&f=webp&q=90" alt="">
+                                <p>Xiaomi 开放式耳机</p>
+                                <p>599元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="small">
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p class="fz18">浏览更多</p>
+                                <p class="mar-0">耳机</p>
+                                <p></p>
+                            </div>
+                        </a>
+                    </li>
+
+
+                </ul>
+                <ul>
+                    <li id="middle"><a href=""><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/71a8e491a39b9c246246140fe68d256b.jpg?thumb=1&w=234&h=300&f=webp&q=90" alt="" width="234px" height="614px"></div></a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="middle"><a href=""><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/46a738e1b375a08dd691a43bb05767f9.png?thumb=1&w=234&h=300&f=webp&q=90" alt="" width="234px" height="614px"></div></a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p>Xiaomi 15 Ultra</p>
+                                <p> 徕卡1英寸主摄 | 徕卡2亿超级长焦 | 徕卡超纯光学系统 | 骁龙8至尊版移动平台 | 6000mAh 小米金沙江电池 | 小米澎湃OS 2</p>
+                                <p>6499元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="small">
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202404091941_350d7e8fb99f243754861b986168c187.png?thumb=1&w=120&h=120&f=webp&q=90" alt="">
+                                <p>Xiaomi 开放式耳机</p>
+                                <p>599元起</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="small">
+                        <a href="">
+                            <div>
+                                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=300&h=300&f=webp&q=90" alt="">
+                                <p class="fz18">浏览更多</p>
+                                <p class="mar-0">耳机</p>
+                                <p></p>
+                            </div>
+                        </a>
+                    </li>
+
+
+                </ul>
+
+            </aside>
         </div>
 
 
