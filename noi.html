@@ -16,15 +16,15 @@
   var b = +prompt('b=')
   var c = +prompt('c=')
   var d = (a + b) / c
-  console.log(d)
+  console.log(d.toFixed(0))
 </script>
 <script id="ch0103/04"  >
   var a = +prompt('a=')
   var b = +prompt('b=')
   var c = a % b
   var d = (a - c) / b
-  console.log('除数:' + d)
-  console.log('余数:' + c)
+  console.log(d)
+  console.log(c)
 </script>
 <script id="ch0103/05" >
   var a = +prompt('a =')
@@ -72,7 +72,7 @@
   var a = +prompt('被除数')
   var b = +prompt('除数')
   var c = a % b
-  console.log(c)
+  console.log(c.toFixed(4))
 </script>
 <script id="ch0103/12" >
   var r = +prompt('半径')
@@ -102,7 +102,7 @@
   var y = +prompt('经过时间')
   var a = (y / x) > +(y / x).toFixed(0) ? +(y / x).toFixed(0) + 1 : +(y / x).toFixed(0)
   var b = n - a
-  console.log('还剩' + b + '个')
+  console.log(b)
 
 </script>
 <script id="ch0103/16" >
@@ -179,9 +179,9 @@
   var a = prompt('请输入')
   a = a.charCodeAt(0);
   if (a % 2 == 0) {
-    a = 'no'
+    a = 'NO'
   } else if (a % 2 == 1) {
-      a =  'yes'
+      a =  'YES'
   }
   console.log(a)
 </script>
@@ -227,6 +227,26 @@
 </script>
 <script id="ch0104/09" >
   var a = +prompt('请输入')
+  var b = false
+  if (a % 3 == 0) {
+    console.log(3)
+    b = true
+  }
+
+  if (a % 5 == 0) {
+    console.log(5)
+    b = true
+  }
+
+  if (a % 7 == 0) {
+    console.log(7)
+    b = true
+  }
+
+  if(b) {
+    console.log('n')
+  }
+
   if (a % 3 == 0 && a % 5 == 0 && a % 7 == 0){
     b = '3 5 7'
   }else if (a % 3 == 0) {
@@ -361,8 +381,14 @@
   var a = +prompt('a =')
   var b = +prompt('b =')
   var c = prompt('符号')
+  var d = 0
   if (c == '/') {
+    if (b == 0){
+    d = 'Divided by zero!'
+    }else {
     d = a / b
+    }
+
   }else if (c == '*'){
     d = a * b
   }else if (c == '+'){
@@ -389,8 +415,8 @@
     x1 = -b / 2 * a + '+' + (Math.sqrt(-d) / 2 * a).toFixed(5) + 'i'
     x2 = -b / 2 * a + '-' + (Math.sqrt(-d) / 2 * a).toFixed(5) + 'i'
   }
-  console.log(x1)
-  console.log(x2)
+  console.log('x1=' + x1)
+  console.log('x2=' + x2)
 </script>
 <script id="ch0104/21" >
   var a = +prompt('苹果个数')
@@ -404,3 +430,204 @@
   }
   console.log(a - e)
 </script>
+<script id="ch0105/01">
+var a = +prompt('人数')
+var flag = 0
+var all = 0
+while(flag < a) {
+  flag = flag + 1
+  var age = +prompt('年龄')
+  all = age + all;
+}
+var average = all / a
+console.log(average.toFixed(2))
+</script>
+<script id="ch0105/02">
+var flag = 0
+var all = 0
+while (flag < 12) {
+  flag = flag + 1
+  var a = + prompt('每月')
+  all = a + all
+}
+var average = all / 12
+console.log('$' + average.toFixed(2))
+</script>
+<script id="ch0105/03">
+var a = +prompt('数据量')
+var flag = 0
+var all = 0
+while(flag < a) {
+  flag = flag + 1
+  var age = +prompt('年龄')
+  all = age + all;
+}
+var average = all / a
+console.log(average.toFixed(4))
+</script>
+<script id="ch0105/04">
+var a = +prompt('数据量')
+var flag = 0
+var all = 0
+while(flag < a) {
+  flag = flag + 1
+  var age = +prompt('年龄')
+  all = age + all;
+}
+var average = all / a
+console.log(all)
+console.log(average.toFixed(5))
+</script>
+<script id="ch0105/05">
+var a = +prompt('人数')
+var flag = 0
+var max = -Infinity
+while(flag < a) {
+  flag = flag + 1
+  var score = +prompt('分数')
+  if (score > max) {
+    max = score
+  }
+}
+console.log(max)
+</script>
+<script id="ch0105/06">
+  var n = +prompt('序列长度')
+  var max = -infinity
+  var min = +infinity
+  var flag = 0;
+  while (flag < n) {
+    flag = flag + 1
+    var num = +prompt('数字')
+    if (max < num) {
+      max = num
+    }
+    if (min > num) {
+      min = num
+    }
+  }
+  var span = max - min
+  console.log(span)
+</script>
+<script id="ch0105/07">
+  var glodAll = 0
+  var silverAll = 0
+  var copperAll = 0
+  var day = +prompt('天数')
+  var flag = 0
+  while (flag < day) {
+    var glod = +prompt('金牌')
+    var silver = +prompt('银牌')
+    var copper = +prompt('铜牌')
+    glodAll += glod
+    silverAll += silver
+    copperAll += copper
+  }
+  var all = glodAll + silverAll + copperAll
+  console.log(glodAll)
+  console.log(silverAll)
+  console.log(copperAll)
+  console.log(all)
+</script>
+<script id="ch0105/08">
+  var angle = +prompt('几边形?')
+  var degAll = 0
+  var flag = 0
+  var all = (angle - 2) * 180
+  while (flag < angle - 1) {
+    flag = flag + 1
+    var deg = +prompt('角度')
+    degAll = degAll + deg
+  }
+  var residue = all - degAll
+  console.log(residue)
+</script>
+<script id="ch0105/09">
+  var a = +prompt('a =')
+  var b = +prompt("b =")
+  var c = b - a + 1
+  var flag = 0
+  var all = 0
+  while (flag < c) {
+    flag = flag + 1
+    if(a % 2 == 1) {
+      all = a + all
+    }
+    a = a + 1
+  }
+  console.log(all)
+</script>
+<script id="ch0105/10">
+  var a = +prompt('a =')
+  var b = +prompt("b =")
+  var c = b - a + 1
+  var flag = 0
+  var all = 0
+  while (flag < c) {
+    flag = flag + 1
+    if(a % 17 == 0) {
+      all = a + all
+    }
+    a = a + 1
+  }
+  console.log(all)
+</script>
+<script id="ch0105/11">
+  var num = +prompt('个数')
+  var flag = 0
+  var a1 = 0
+  var a5 = 0
+  var a10 = 0
+  while (flag < num) {
+    flag = flag + 1
+    var k = +prompt('数')
+    if (k == 1) {
+      a1 = a1 + 1
+    }
+    if (k == 5) {
+      a5 = a5 + 1
+    }
+    if (k == 10) {
+      a10 = a10 + 1
+    }
+  }
+  console.log(a1)
+  console.log(a5)
+  console.log(a10)
+</script>
+<script id="ch0105/12">
+
+</script>
+<script id="ch0105/13"></script>
+<script id="ch0105/14"></script>
+<script id="ch0105/15"></script>
+<script id="ch0105/16"></script>
+<script id="ch0105/17"></script>
+<script id="ch0105/18"></script>
+<script id="ch0105/19"></script>
+<script id="ch0105/20"></script>
+<script id="ch0105/21"></script>
+<script id="ch0105/22"></script>
+<script id="ch0105/23"></script>
+<script id="ch0105/24"></script>
+<script id="ch0105/25"></script>
+<script id="ch0105/26"></script>
+<script id="ch0105/27"></script>
+<script id="ch0105/28"></script>
+<script id="ch0105/29"></script>
+<script id="ch0105/30"></script>
+<script id="ch0105/31"></script>
+<script id="ch0105/32"></script>
+<script id="ch0105/33"></script>
+<script id="ch0105/34"></script>
+<script id="ch0105/35"></script>
+<script id="ch0105/36"></script>
+<script id="ch0105/37"></script>
+<script id="ch0105/38"></script>
+<script id="ch0105/39"></script>
+<script id="ch0105/40"></script>
+<script id="ch0105/41"></script>
+<script id="ch0105/42"></script>
+<script id="ch0105/43"></script>
+<script id="ch0105/44"></script>
+<script id="ch0105/45"></script>
