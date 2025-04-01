@@ -412,11 +412,11 @@
     x1 = -b / 2 * a
     x2 = x1
   }else {
-    x1 = -b / 2 * a + '+' + (Math.sqrt(-d) / 2 * a).toFixed(5) + 'i'
-    x2 = -b / 2 * a + '-' + (Math.sqrt(-d) / 2 * a).toFixed(5) + 'i'
+    x1 = -b / 2 * a + (Math.sqrt(-d) / 2 * a > 0 ? '' : '+') + (Math.sqrt(-d) / 2 * a).toFixed(5) + 'i'
+    x2 = -b / 2 * a + (Math.sqrt(-d) / 2 * a > 0 ? '' : '+') + (Math.sqrt(-d) / 2 * a).toFixed(5) + 'i'
   }
   console.log('x1=' + x1)
-  console.log('x2=' + x2)
+  console.log(';x2=' + x2)
 </script>
 <script id="ch0104/21" >
   var a = +prompt('苹果个数')
@@ -493,8 +493,8 @@ console.log(max)
 </script>
 <script id="ch0105/06">
   var n = +prompt('序列长度')
-  var max = -infinity
-  var min = +infinity
+  var max = -Infinity
+  var min = +Infinity
   var flag = 0;
   while (flag < n) {
     flag = flag + 1
@@ -516,6 +516,7 @@ console.log(max)
   var day = +prompt('天数')
   var flag = 0
   while (flag < day) {
+    flag = flag + 1
     var glod = +prompt('金牌')
     var silver = +prompt('银牌')
     var copper = +prompt('铜牌')
