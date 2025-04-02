@@ -597,21 +597,190 @@ console.log(max)
   console.log(a10)
 </script>
 <script id="ch0105/12">
+  var a = +prompt('个数')
+  var b = +prompt('查的数')
+  var d = 0
+  for (var i = 0 ; i < a ; i++ ){
+    var c = +prompt('数')
+    if (b == c){
+      d += 1
+    }
+  }
+  console.log(d)
+</script>
+<script id="ch0105/13">
+  var a = +prompt('数')
+  var b = +prompt('方')
+  var c = 1;
+  for (var i = 0; i < b; i++){
+    c = c * a
+  }
+  console.log(c)
+</script>
+<script id="ch0105/14">
+  var a = +prompt('人口')
+  var b = +prompt('年')
+  for (var i = 0; i < b; i++) {
+    a  = a * (0.001 + 1)
+  }
+  console.log(a.toFixed(4))
+</script>
+<script id="ch0105/15">
+  var role = +prompt('利率')
+  var money = +prompt('总钱')
+  var year = +prompt('时间')
+  for (var i = 0; i < year; i++) {
+    money = money * (1 + role / 100)
+  }
+  console.log(Math.trunc(money))
+</script>
+<script id="ch0105/16">
+  var money = +prompt('年薪')
+  var crea = +prompt('房价增长')
+  var a = 200
+  for (var i = 2; i <= 60; i++) {
+    a = a * (1 + crea / 100) //房价增长
+    if (a <= money * i){ //判断能不能买得起
+      console.log(i)
+      break
+    } else if (i > 20 && a <= money * i){ //买得起但是大于20
+      console.log('Impossible')
+      break
+    }
+    if (i == 60) { //一直买不起
+      console.log('死了')
+    }
+  }
 
 </script>
-<script id="ch0105/13"></script>
-<script id="ch0105/14"></script>
-<script id="ch0105/15"></script>
-<script id="ch0105/16"></script>
-<script id="ch0105/17"></script>
-<script id="ch0105/18"></script>
-<script id="ch0105/19"></script>
-<script id="ch0105/20"></script>
-<script id="ch0105/21"></script>
-<script id="ch0105/22"></script>
-<script id="ch0105/23"></script>
-<script id="ch0105/24"></script>
-<script id="ch0105/25"></script>
+<script id="ch0105/17">
+  var k = +prompt('个数')
+  var k1 = 1
+  var k2 = 1
+
+  for (var i = 0; i  < Math.trunc((k + 1 - 2) / 2); i++){
+    k1 = k1 + k2
+    k2 = k1 + k2
+  }
+
+  if (k % 2 == 1) {
+    console.log(k1)
+  } else {
+    console.log(k2)
+  }
+
+</script>
+<script id="ch0105/18">
+  var n = +prompt('数据数')
+  var a = +prompt('鸡尾酒病例数')
+  var b = +prompt('鸡尾酒治疗数')
+  var persentage = b / a * 100
+  for (var i = 0; i < n - 1; i++)  {
+    var c = +prompt('病例数')
+    var d = +prompt('治疗数')
+    var e = d / c * 100
+    if (e - persentage > 5 ){
+      console.log('better')
+    } else if (e - persentage < 0){
+      console.log('worse')
+    } else {
+      console.log('same')
+    }
+  }
+</script>
+<script id="ch0105/19">
+  var time = 0
+  var n = +prompt('屋顶数')
+  for (var i = 0; i < n; i++) {
+    var x = +prompt('x=')
+    var y = +prompt('y')
+    var people = +prompt('人数')
+    var c = Math.sqrt(x ** 2 + y ** 2) * 2
+    time += c / 50 + people * 1.5
+  }
+  console.log(Math.ceil(time))
+</script>
+<script id="ch0105/20">
+  var ball = +prompt('初始的高度')
+  var l = 20;
+  for (var i = 0; i < 10; i++) {
+    ball = ball / 2
+    l += ball * 2
+  }
+  console.log(l)
+  console.log(ball)
+
+</script>
+<script id="ch0105/21">
+  var num = +prompt('数')
+  var flag = 0
+  for (var i = 0; i < 999; i++){
+    flag = num
+    if (num % 2 == 1){
+      num = num * 3 + 1
+      console.log(flag + '*3+1=' + num)
+    }else {
+      num /= 2
+      console.log(flag + '/2=' + num)
+    }
+    if (num == 1) {
+      console.log('End')
+      break
+    }
+  }
+</script>
+<script id="ch0105/22">
+  var gap = 0;
+  var gapAll = 0
+  debugger
+  for (var i = 0; i < 12; i++) {
+    var money = +prompt((i+1) +'月支出')
+    if (gap + 300 < money) {
+      console.log('-' + (i + 1))
+      break
+    } else {
+      var flag = gap + 300 - money
+      gapAll += Math.trunc (flag / 100) * 100
+      gap = flag - Math.trunc (flag / 100) * 100
+    }
+
+    if (i == 11) {
+      console.log((gapAll + gap) * (1 + 0.2))
+    }
+  }
+
+</script>
+<script id="ch0105/23">
+  var medicine = +prompt('药品数')
+  var people = +prompt('取药人数')
+  var xpeople = 0;
+  for (var i = 0; i < people; i++) {
+    var day = +prompt('数量')
+    if (day > medicine) {
+      xpeople++
+    } else (
+      medicine -= day
+    )
+  }
+  console.log(xpeople)
+</script>
+<script id="ch0105/24">
+  var time = 0
+  var times = +prompt('时间')
+  for (var i = 0; i < times; i++) {
+    var shrink = +prompt('收缩')
+    var diastole = +prompt('舒张')
+    if (shrink <= 140 && shrink >= 90 && diastole <= 90 && diastole >= 60) {
+      time++
+    } else {
+      time = 0
+    }
+  }
+  console.log(time)
+</script>
+<script id="ch0105/25">
+
+</script>
 <script id="ch0105/26"></script>
 <script id="ch0105/27"></script>
 <script id="ch0105/28"></script>
