@@ -16,7 +16,7 @@
   var b = +prompt('b=')
   var c = +prompt('c=')
   var d = (a + b) / c
-  console.log(d.toFixed(0))
+  console.log(Math.trunc(d))
 </script>
 <script id="ch0103/04"  >
   var a = +prompt('a=')
@@ -653,7 +653,7 @@ console.log(max)
   }
 
 </script>
-<script id="ch0105/11">
+<script id="ch0105/17">
   var k = +prompt('个数')
   var k1 = 1
   var k2 = 1
@@ -707,8 +707,8 @@ console.log(max)
     ball = ball / 2
     l += ball * 2
   }
-  console.log(l)
-  console.log(ball / 2)
+  console.log(l.toFixed(4))
+  console.log((ball / 2).toFixed(7))
 
 </script>
 <script id="ch0105/21">
@@ -812,6 +812,7 @@ console.log(max)
       all++
     }
   }
+  console.log(all)
 </script>
 <script id="ch0105/27">
   var add = 0
