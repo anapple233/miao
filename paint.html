@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="1000" height="1000"></canvas>
+</body>
+<script>
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated' //放大时的插帧方式：不插帧，直接放大像素
+  var ctx = canvas.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    x = Math.round(x)
+    y = Math.round(y)
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+  /**
+   * 你的任务：通过调用dot函数，实现：
+   * 需要注意，dot函数不能接收浮点数，如果参数为浮点数，会被转换为整数后绘制
+      * 在 坐标 (42, 42) 画出一个点
+      * 画一条水平实线，粗细为一个像素
+      * 画一条垂直实线，粗细为一个像素
+      * 画一条一个实点一个空点的虚线
+      * 画一条两个实点两个空点的虚线
+      * 画一条三个实点两个空点的虚线
+      * 画一条45度的斜线
+      * 画一条30度的斜线（与x轴的夹角呈30度）
+      * 画一条60度的斜线（与x轴的夹角呈60度）
+      * 画一条跨越画布左上角和右下角的对角线
+      * 画一个空心矩形
+      * 画一个实心矩形
+      * 画两个空心的圆，圆心在画布中心：
+        * 一个半径为50像素
+        * 一个半径为200像素
+      * 画一个实心的圆，半径至少为100像素
+      * 画一个【大小位置都合适】的sin(x)的图像
+      * 画一个贝塞尔曲线（二阶或三阶均可，二阶由三个点确定，三阶由四个点确定）
+
+      * 画出rgb色彩空间的某一面（尺寸要大于100x100）
+      * 如果做出上一题后，尝试将其每个点的坐标乘以一个矩阵（如(2,0,0,2)或(1,0.27得到新的位置，即绘制出被线性变换后的色彩空间某一面
+        可以考虑如下几种矩阵：
+           2 0
+           0 2
+           ------
+           1  0.27
+           0  1
+           ------
+           0.5    0.87
+           -0.87  0.5
+
+   */
+</script>
+<script>
+  // 不可更改上面的代码
+  // 你的代码写在这里
+  dot(42,42,color = 'black')
+  for (var i = 200; i < 800; i++) { // 直线
+    dot(500, i  ,color = "red")
+    dot(i, 500, color = "red")
+  }
+
+  for (var i = 200; i < 800; i++) { //虚线
+    if (i % 2 == 0) {
+      dot(600, i ,color = "skyblue")
+    }
+  }
+
+  for (var i = 200; i < 800; i += 4) {
+    var j = i + 1
+    dot(400, j , color = "skyblue")
+    dot(400, i ,color = "skyblue")
+  }
+
+  for (var i = 200; i < 800; i += 5) {
+    var j = i + 1
+    var k = i + 2
+    dot(300, i, color = "skyblue")
+    dot(300, j, color = "skyblue")
+    dot(300, k, color = "skyblue")
+  }
+
+  for (var i = 0; i < 1000; i++) { //45
+    dot(i, i, color = "black")
+  }
+
+  for (var i = 0; i < 500; i++) { //30
+    dot(i , (Math.sqrt(3) / 3)  *  i, color = "black")
+  }
+
+  for (var i = 0; i < 500; i++) { //60
+    dot(i , (Math.sqrt(3))  *  i, color = "black")
+  }
+
+  for (var i = 100; i < 200; i++) { //矩形
+    for (var j = 0; j < 50; j++) {
+      dot(i , j ,color = "white")
+      dot(i + 200, j + 200 ,color = "red")
+      if (i == 100 || j == 0 || i == 199 || j == 49) {
+        dot(i , j + 100, color = "red")
+      }
+    }
+  }
+
+  // xfor (var i = 0; i < 100; i+= 0.01) {  //贝塞尔
+
+  // }
+
+  for (var i = 0; i < 9999; i++) {
+    dot(50 * Math.sin(i) + 500, 50 * Math.cos(i) + 500, color = "red")
+    dot(200 * Math.sin(i) + 500, 200 * Math.cos(i) + 500, color = "red")
+  }
+
+  for (var i = 0; i < 999; i++) {
+    for (var j = 0; j < 150; j++) {
+      dot(j * Math.sin(i) + 500, j * Math.cos(i) + 500, color = "red")
+    }
+  }
+
+  for (var i = 0; i < 500; i++) {
+    for (var j = 0; j < 10; j++)
+      var y = 30 * Math.sin(0.05 * i)
+      dot(700 + i ,700  + y, color = "rgb(9 , 132, 227)")
+  }
+
+  function matrix_x (x, y, a, b, c, d) {
+    var x1 = x
+    var y1 = y
+    x1 = a * x + c * y
+    y1 = b * x + d * y
+    return x1
+  }
+
+
+  function matrix_y (x, y, a, b, c, d) {
+    var x1 = x
+    var y1 = y
+    x1 = a * x + c * y
+    y1 = b * x + d * y
+    return y1
+  }
+
+  for (var i = 0; i < 257; i++) {
+    for (var j = 0; j < 257; j++) {
+      dot(matrix_x(i, j, 2, 0, 0, 2), matrix_y(i, j ,2, 0, 0, 2), color = 'rgb(' + i + ',' + j +  ',' + 255 + ')')
+      dot(i + 600, j, color = 'rgb(' + i + ',' + j +  ',' + 255 + ')')
+      dot(matrix_x(i + 600, j, 1, 0.27, 0, 1), matrix_y(i + 600, j , 1, 0.27, 0, 1), color = 'rgb(' + i + ',' + j +  ',' + 255 + ')')
+      dot(matrix_x(i + 600, j, 0.5, 0.87, -0.87, 0.5), matrix_y(i + 600, j , 0.5, 0.87, -0.87, 0.5), color = 'rgb(' + i + ',' + j +  ',' + 255 + ')')
+    }
+  }
+</script>
+</html>
