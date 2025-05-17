@@ -23,12 +23,7 @@
   }
 
 
-  var a = new Vector(1,2)
-  var b = new Vector(4,5)
-  var c = a.plus(b) //  new Vector(5, 7)
-  console.log(c.x) // 5
-  console.log(c.y) // 7
-  console.log(c.length) // results in Math.sqrt(5*5+7*7)
+
 
 
 
@@ -74,13 +69,6 @@
   }
 
 
-  var d = new Complex(1,2) // 1+2i
-  var e = new Complex(3, -4) // 3-4i
-
-  var f = d.plus(e) // 4-2i
-  var g = e.mul(f) // 4-22i
-  console.log(g.real) // 4
-  console.log(g.imag) // -22
 
 
   // 实现一个类似js中Array的类型
@@ -153,7 +141,7 @@
   }
 
 
-  var h = new ArrayList()
+
 
   for (var i = 0; i < 10000; i++) {
     h.push(i)
@@ -221,19 +209,6 @@
   }
 
 
-  var q = new Queue()
-
-  q.enqueue(5)
-  q.enqueue(6)
-
-  console.log(q.dequeue()) // 5
-
-  q.enqueue(8)
-  q.enqueue(9)
-
-  console.log(q.dequeue()) // 6
-  console.log(q.dequeue()) // 8
-  console.log(q.size) // 1
 
 
 
@@ -280,16 +255,6 @@
     }
   }
 
-  var s = new MySet()
-  s.add(1)
-  s.add(1)
-  s.size // 1
-  s.add(2)
-  s.size // 2
-  s.delete(1)
-  s.size // 1
-  s.has(2) // true
-  s.has(1) // false
 
 
 
