@@ -1,5 +1,0 @@
-var foobar = {
-  chunk: function(){
-
-  }
-}
