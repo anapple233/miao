@@ -1,8 +1,7 @@
-var foobar = {
+var anapple233 = {
   compact : function (array) {
     return array.filter((item) => {
       return typeof(item) == 'number'
-
     })
   },
   chunk: function(array, size = 1){
