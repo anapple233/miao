@@ -296,14 +296,68 @@ var anapple233 = {
     }
   },
   sortBy: function (collection, callback) {
-    let result = Array.isArray(collection)? [] : {}
+    let isArray = Array.isArray(collection)
+
+    if (typeof callback === 'function') {
+      disfc()
+      return collection
+    } else if (isArray) {
+      disarr()
+      return collection
+    } else if (typeof callback === 'string') {
+      disstr()
+      return collection
+    }
+
+    function compare (a, b) {
+        if (typeof a === 'string') {
+          return a.localeCompare(b)
+        } else {
+          return a - b
+        }
+    }
+
+    function disfc () {
+      collection.sort((a, b) => {
+        return compare(callback(a), callback(b))
+      })
+      return collection
+
+    }
+
+    function disstr () {
+      collection.sort((a, b) => {
+        return compare(a.callback, b.callback)
+      })
+    }
+
+    function disarr () {
+      collection.sort((a, b) => {
+        let i = 0
+        if (i === callback) {
+          return 0
+        } else {
+          while (compare(a[callback[i]], b[callback[i]]) === 0) {
+            i++
+          }
+        }
+        return compare(a[callback[i]], b[callback[i]])
+      })
+    }
+  },
+  sample: function (collection) {
+    return collection[Math.random() * collection.length | 0]
+  },
+  isUndefined: function(value) {
+    return value === 'undefined'
+  },
+  isNull: function(value) {
 
   }
 }
 /*
  ,findIndex,findLastIndex
   every,some,reduceRight
-  ,sortBy,sample,
   isUndefined,isNull,isNil,max,min,maxBy,minBy,round,sumBy
   flagMap,flatMapDepth,get,has,mapKeys,mapValues
   range,stringifyJSON,concat,isEqual,repeat,padStart,padEnd,pad,keys,values,random,
