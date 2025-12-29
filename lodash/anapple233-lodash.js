@@ -295,7 +295,7 @@ var anapple233 = {
       return result.length
     }
   },
-  sortBy: function (collection, callback) {
+  sortBy: function (collection, callback, fc) {
     let isArray = Array.isArray(collection)
 
     if (typeof callback === 'function') {
@@ -352,14 +352,218 @@ var anapple233 = {
     return value === 'undefined'
   },
   isNull: function(value) {
+    return value === 'null'
+  },
+  isNil: function(value) {
+    if (value === 'null' || value === 'undefined') {
+      return true
+    } else {
+      return false
+    }
+  },
+  max: function (arr) {
+    if (arr.length === 0) {
+      return undefined
+    }
+    let max = -Infinity
+    for (let i = 0; i < arr.length; i++) {
+      if (typeof arr[i] === 'string') {
+        continue
+      }
+      if (arr[i] > max) {
+        max = arr[i]
+      }
+    }
+    return max
+  },
+  min: function (arr) {
+    if (arr.length === 0) {
+      return undefined
+    }
+    let min = Infinity
+    for (let i = 0; i < arr.length; i++) {
+      if (typeof arr[i] === 'string') {
+        continue
+      }
+      if (arr[i] < min) {
+        min = arr[i]
+      }
+    }
+    return min
+  },
+  maxBy: function (arr, callback) { //没有处理字符串和数字比较时的情况
+    let max = -Infinity
+    for (let i = 0; i < arr.length; i++) {
+      if (typeof callback === 'function') {
+        if ([callback(arr[i])] > max)  {
+          max = i
+        }
+      } else {
+        if (arr[i][callback] > max) {
+          max = i
+        }
+      }
+    }
+    return arr[max]
+  },
+  minBy: function (arr, callback) {
+    let min = Infinity
+    for (let i = 0; i < arr.length; i++) {
+      if (typeof callback === 'function') {
 
+        if ([callback(arr[i])] < min)  {
+          min = i
+        }
+      } else {
+        if (arr[i][callback] > max) {
+          min = i
+        }
+      }
+    }
+    return arr[min]
+  },
+  round: function (value, digit) {
+    let arr = value.toString().split('.')
+    if (digit > 0) {
+      if (digit > arr[1].length) {
+        return value
+      } else {
+        let flag = value + 5 * Math.pow(10, - digit - 1) + ''
+        res = flag.toString().split('.')
+        flag = res[1].slice(0, digit )
+        return Number(res[0]) + Number('0.' +   flag)
+      }
+    } else if (digit === 0) {
+      return value
+    } else {
+      if (digit < -arr[0].length) {
+        return 0
+      } else {
+        let len = arr[0].length
+        let result = ''
+        for (let i = 0; i < len ; i++) {
+          if (len + digit - 1 < i) {
+            result =  result + 0
+          } else {
+            result = + result + arr[0][i]
+          }
+        }
+        result = Number(result) + (Number(arr[0][digit + len]) >= 5 ? Math.pow(10, -digit) : 0)
+        return result
+      }
+    }
+  },
+  sumBy: function (arr, callback) {
+    let isFuc = typeof callback === 'function'
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+      if (isFuc) {
+        if (typeof [callback(arr[i])] === 'string') {
+          continue
+        }
+        sum += callback(arr[i])
+      } else {
+        sum += arr[i][callback]
+      }
+    }
+    return sum
+  },
+  flatMap : function (collection, callback) {
+    let result = []
+    collection.forEach(item => {
+      let res = callback(item)
+      result.push(...res)
+    })
+
+    return result
+  },
+  flatMapDepth : function (collection, callback, n) {
+    let result = []
+    collection.forEach(item => {
+      let res = callback(item).flat(n - 1)
+      result.push(...res)
+    })
+    return result
+  },
+  get : function (obj, path, defaultValue) {
+    let i = 0
+    let process
+
+    if (Array.isArray(path)) {
+      while(i <= path.length - 1) {
+        if (i === 0) {
+          process = obj[path[i]]
+        } else {
+          process = process[path[i]]
+        }
+        i++
+        getReturn()
+      }
+
+    } else {
+      path += '.'
+      while (i < path.length - 1) {
+        if (i === 0) {
+          process = obj[analyobj()]
+        }
+        getReturn()
+        analypath()
+      }
+
+      function analypath () {
+        if (path[i] === '.') {
+          i++ // skip .
+          process = process[analyobj()]
+        }
+
+        if (path[i] === '[') {
+          i++ //skip [
+          process = process[analyArr()]
+          i++ //skip ]
+        }
+      }
+
+      function analyobj () {
+        let obj = ''
+
+        while (path[i] !== '[' && path[i] !== '.') {
+          obj += path[i]
+          i++
+        }
+
+        return obj
+      }
+
+      function analyArr () {
+        let num = ''
+
+        while(path[i] !== ']') {
+          num += path[i]
+          i++
+        }
+
+        return num
+      }
+    }
+
+    return process
+
+    function getReturn () {
+      if (process === undefined ) {
+          if (defaultValue) {
+            return defaultValue
+          } else {
+            return undefined
+          }
+      }
+    }
   }
+
 }
 /*
  ,findIndex,findLastIndex
   every,some,reduceRight
-  isUndefined,isNull,isNil,max,min,maxBy,minBy,round,sumBy
-  flagMap,flatMapDepth,get,has,mapKeys,mapValues
+  get,has,mapKeys,mapValues
   range,stringifyJSON,concat,isEqual,repeat,padStart,padEnd,pad,keys,values,random,
   round,ceil,floor,cloneDeep
   trim,trimStart,trimEnd,assign,merge,
